@@ -220,4 +220,35 @@ export default {
   color: #424242;
   border-bottom: solid 1px #bdbdbd;
 }
+
+h5 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #424242;
+  border-bottom: solid 1px white; 
+}
+
+dl {
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 6px;
+}
+
+dt {
+  float: left;
+  width: 50%;
+  /* adjust the width; make sure the total of both is 100% */
+  padding: 0;
+  margin: 0
+}
+
+dd {
+  float: left;
+  width: 50%;
+  /* adjust the width; make sure the total of both is 100% */
+  padding: 0;
+  margin: 0
+}
 </style>

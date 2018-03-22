@@ -1,13 +1,14 @@
 <<template>
   <div>
-    Parameters:
-    <div v-for="item in item.Parameter">
-      {{ item.$.Name }}
-      </div>
-      Return type:
-      <div v-for="item in item.ReturnType">
-        {{ item.$.Type }}
-      </div>
+    <h5>Parameters:</h5>
+    <dl v-for="item in item.Parameter">
+      <dt>{{ item.$.Name }}</dt>
+      <dd>{{ item.$.Type }}</dd>
+    </dl>
+    <h5>Return type:</h5>
+    <div v-for="item in item.ReturnType">
+      {{ item.$.Type }}
+    </div>
   </div>
 </template>
 

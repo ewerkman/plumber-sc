@@ -6,11 +6,10 @@
             <span class="namespace">{{ pipeline.Namespace }}</span>
             <h2>{{ pipeline.Name }}</h2>
 
-
-            <div>
+            <div >
                 <i class="fa fa-cog" aria-hidden="true"></i>
             </div>
-            <div>
+            <div title="Comments">
                 <i class="fa fa-commenting-o" aria-hidden="true"></i> {{ pipeline.Comments }}
             </div>
 
@@ -25,7 +24,7 @@
 
                         <div class="timeline-label">
                             <h3>Start</h3>
-                            <div v-bind:title="pipeline.Receives">
+                            <div v-bind:title="pipeline.Receives | prettyReceives">
                                 <i class="fa fa-sign-in" aria-hidden="true"></i> {{ pipeline.Receives | prettyClrType }}
                             </div>
                         </div>
@@ -47,10 +46,10 @@
                             <div>
                                 <i class="fa fa-cog" aria-hidden="true"></i>
                             </div>
-                            <div v-bind:title="block.Receives">
+                            <div v-bind:title="block.Receives | prettyReceives">
                                 <i class="fa fa-sign-in" aria-hidden="true"></i> {{ block.Receives | prettyClrType }}
                             </div>
-                            <div v-bind:title="block.Returns">
+                            <div v-bind:title="block.Returns | prettyReturns">
                                 <i class="fa fa-sign-out" aria-hidden="true"></i> {{ block.Returns | prettyClrType }}
                             </div>
                         </div>
@@ -68,7 +67,7 @@
 
                         <div class="timeline-label">
                             <h3>Finish</h3>
-                            <div v-bind:title="pipeline.Returns">
+                            <div v-bind:title="pipeline.Returns | prettyReturns">
                                 <i class="fa fa-sign-out" aria-hidden="true"></i> {{ pipeline.Returns | prettyClrType }}
                             </div>
                         </div>
@@ -81,7 +80,9 @@
 </template>
 
 <script>
-import { prettyClrType } from "../filters/clrTypes";
+import { prettyClrType } from "../filters/clrTypes"
+import { prettyReceives } from "../filters/titles"
+import { prettyReturns } from "../filters/titles"
 
 export default {
   name: "Pipeline",
@@ -92,7 +93,9 @@ export default {
     };
   },
   filters: {
-    prettyClrType
+    prettyClrType,
+    prettyReceives,
+    prettyReturns
   },
   computed: {
     pipelines: () => {
