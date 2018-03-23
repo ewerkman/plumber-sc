@@ -121,4 +121,8 @@ h3 {
 h1 {
   color: #212121;
 }
+
+.code {
+  font-family: "Lucida Console", Monaco, monospace;
+}
 </style>

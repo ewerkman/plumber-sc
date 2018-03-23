@@ -2,9 +2,9 @@
 <div>
 
     <div v-if="!block">
-          <b-row>
-              </b-row>
-              </div>
+      <b-row>
+      </b-row>
+    </div>
     <div v-else class="block">
         <b-row>
             <b-col>
