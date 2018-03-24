@@ -1,9 +1,13 @@
 <<template>
-<div>
-    <div v-if="item.Property && item.Property.length > 0">
-    <property name="item" v-for="item in item.Property" :key="item.Name" :property="item"></property>
+  <div>
+    <div class="members">
+      <h5>Members:</h5>
+      <div v-for="member in item.Member">
+        <span class="code">{{ member.$.Name }}</span>
+        <span class="code">({{ member.$.Value }})</span>
+      </div>
+    </div>
   </div>
-</div>
 </template>
 
 <script>

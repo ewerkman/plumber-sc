@@ -1,6 +1,6 @@
 <<template>
     <div v-if="property">
-       <b>{{ property.$.Name }}</b> : {{ property.$.Type }}
+       <b class="code">{{ property.$.Name }}</b> : <span class="code">{{ property.$.Type }}</span>
     </div>
 </template>
 

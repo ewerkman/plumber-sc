@@ -124,5 +124,6 @@ h1 {
 
 .code {
   font-family: "Lucida Console", Monaco, monospace;
+  font-size: 14px;
 }
 </style>

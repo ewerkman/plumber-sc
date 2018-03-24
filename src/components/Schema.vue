@@ -225,30 +225,17 @@ h5 {
   font-weight: bold;
   font-size: 14px;
   color: #424242;
+  padding-bottom: 3px;
+  margin-bottom: 2px;
   border-bottom: solid 1px white; 
 }
 
-dl {
-  width: 100%;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 6px;
+.inputparameters {
+  margin-top: 6px;
 }
 
-dt {
-  float: left;
-  width: 50%;
-  /* adjust the width; make sure the total of both is 100% */
-  padding: 0;
-  margin: 0
+.returntype {
+  margin-top: 6px;
 }
 
-dd {
-  float: left;
-  width: 50%;
-  /* adjust the width; make sure the total of both is 100% */
-  padding: 0;
-  margin: 0
-}
 </style>
