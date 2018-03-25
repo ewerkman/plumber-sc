@@ -18,6 +18,9 @@
         </keep-alive>
       </b-col>
     </b-row>
+    <back-to-top bottom="50px" right="50px">
+      <button type="button" class="btn btn-info btn-to-top"><i class="fa fa-chevron-up"></i></button>
+    </back-to-top>
   </div>
 </template>
 
@@ -34,6 +37,8 @@ import axios from "axios";
 import sortJsonArray from "sort-json-array";
 
 import Authenticate from "@/components/Authenticate.vue";
+
+import BackToTop from 'vue-backtotop'
 
 export default {
   name: "app",
@@ -56,7 +61,8 @@ export default {
   },
   components: {
     Navigation,
-    Authenticate
+    Authenticate,
+    BackToTop
   },
   created() {},
   mounted() {
@@ -125,5 +131,21 @@ h1 {
 .code {
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 14px;
+}
+
+.btn-to-top {
+  width: 60px;
+  height: 60px;
+  padding: 10px 16px;
+  border-radius: 10%;
+  background-color: #d50000;
+  border-color: #d50000;
+  font-size: 22px;
+  line-height: 22px;
+}
+
+.btn-to-top:hover {
+  background-color: #FF7F7F;
+  border-color: #FF7F7F;
 }
 </style>

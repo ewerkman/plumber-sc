@@ -78,7 +78,8 @@ export default {
     }
   },
   components: {
-    Structure
+    Structure,
+    BackToTop
   },
   mounted() {},
   methods: {
@@ -237,5 +238,7 @@ h5 {
 .returntype {
   margin-top: 6px;
 }
+
+
 
 </style>
