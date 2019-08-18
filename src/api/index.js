@@ -29,9 +29,9 @@ export function getEnvironments(config, headers, context) {
       // Replace policysets references with actual poiicy set
       var loadedPolicySets = [];
       var environments = response.data.value;
-      _.each(environments, (environment, envIndex) => {
+      _.each(environments, (environment) => {
         var policies = environment.Policies;
-        _.each(policies, (policy, policyIndex) => {
+        _.each(policies, (policy) => {
           if (
             policy["@odata.type"] === "#Sitecore.Commerce.Core.PolicySetPolicy" &&
             loadedPolicySets.indexOf(policy.PolicySetId) < 0
